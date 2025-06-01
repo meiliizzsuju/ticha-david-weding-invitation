@@ -1,22 +1,28 @@
 'use client';
 
-import React from 'react'
-import {DropdownComponent} from '../../utils/downdown/drowndown' 
+import React, { useState } from 'react';
+import { DropdownComponent } from '../../utils/downdown/drowndown';
 
 const Header: React.FC = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState('Eng');
+
+  const options = [
+    { label: 'English', href: '/', onSelect: () => setSelectedLanguage('Eng') },
+    { label: 'Thai', href: '/th', onSelect: () => setSelectedLanguage('TH') },
+    { label: 'Korean', href: '/kr', onSelect: () => setSelectedLanguage('KR') },
+  ];
+
+  // We will modify DropdownComponent so it calls onSelect when clicking option
+
   return (
     <header className="flex items-center justify-between p-4 bg-white shadow-md">
-      <h1 className="text-xl font-bold text-gray-800">My App</h1>
       <DropdownComponent
-        buttonLabel="Language"
-        options={[
-          { label: 'English', href: '/' },
-          { label: 'Thai', href: '/th' },
-          { label: 'Korean', href: '/kr' },
-        ]}
+        buttonLabel={selectedLanguage}
+        options={options}
+        styling={{ optionsAlign: 'left' }}
       />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
