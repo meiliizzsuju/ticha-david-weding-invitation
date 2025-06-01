@@ -9,7 +9,8 @@ export interface DropdownOption {
   onClick?: () => void
 }
 export interface DropdownStyle {
-  optionsAlign: string
+  optionsAlign: string,
+  menuButtonClasses?: string;
 }
 
 export interface DropdownOptions {
@@ -23,17 +24,20 @@ export const DropdownComponent: React.FC<DropdownOptions> = ({ buttonLabel, opti
   const alignmentClass = styling.optionsAlign === 'left'
     ? 'left-0 origin-top-left'
     : 'right-0 origin-top-right';
+  const menuButtonCss = styling.menuButtonClasses?.trim()
+    ? styling.menuButtonClasses
+    : 'inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50';
 
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">
+        <MenuButton className={`${menuButtonCss}`}>
           {buttonLabel}
           <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
         </MenuButton>
       </div>
 
-       <MenuItems
+      <MenuItems
         className={`absolute z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none ${alignmentClass}`}
       >
         <div className="py-1">
