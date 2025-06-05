@@ -3,6 +3,7 @@
 import React from 'react';
 import { useSearchParams } from 'next/navigation';
 import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
+import "../mainContent/mainContent.css";
 
 function MainContent() {
   const searchParams = useSearchParams();
@@ -16,7 +17,7 @@ function MainContent() {
             <ImageRenderer src="/images/logo-TD-eng.svg" alt="Ticha & David logo" width={100} height={135} className={'mx-auto'} />
 
             <div className='hero-banner--heading text-center'>
-              <span className='hero-banner--guest-name'>{guestName}</span>
+              <span className='hero-banner--guest-name font-hand-writing'>{guestName}</span>
               <p className=''>You're Invited to</p>
               <ImageRenderer src="/images/logo-ticha-david-eng.svg" alt="Ticha & David" width={500} className={'mx-auto'} />
             </div>
@@ -24,7 +25,7 @@ function MainContent() {
             <div className='hero-banner--info'>
               <div className='hero-banner--info-item'>
                 <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'mx-auto'} />
-                <span>24</span>
+                <span className='hero-banner--heading-no'>24</span>
                 <span>January 2026</span>
               </div>
               <div className='hero-banner--info-item'>

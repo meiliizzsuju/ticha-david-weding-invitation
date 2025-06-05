@@ -1,8 +1,17 @@
+@import url(https://fonts.googleapis.com/css2?family=Gothic+A1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swa);
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Gautreaux';
+  src: url('/fonts/Gautreaux-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F6F3F3;
+  --foreground: #583B39;
 }
 
 @theme inline {
@@ -14,13 +23,21 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--background); /* force */
+    --foreground: var(--foreground); /* force */
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #583B39;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-hand-writing{
+  font-family: 'Gautreaux', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
