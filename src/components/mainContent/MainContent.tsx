@@ -27,15 +27,16 @@ function MainContent() {
             </div>
 
             <div className='hero-banner--info md:flex md:justify-center my-20'>
-              <div className='hero-banner--info-item w-full md:max-w-2xs text-center'>
+              <a className='hero-banner--info-item w-full md:max-w-2xs text-center' href='/others/mywedding.ics' download="mywedding.ics">
                 <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
                 <span className='hero-banner--heading-no block text-4xl leading-none'>24</span>
                 <span className='text-2xl'>January 2026</span>
-              </div>
-              <div className='hero-banner--info-item w-full md:max-w-2xs text-center mt-6 md:mt-0'>
+              </a>
+              <a className='hero-banner--info-item w-full md:max-w-2xs text-center mt-6 md:mt-0'
+                href='https://maps.app.goo.gl/5cDWsQYiatFXiQt26' target='_blank'>
                 <ImageRenderer src="/images/ico-location.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
                 <span className='text-2xl'>Cross Chiang Mai <br />Riverside Resort</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
