@@ -35,7 +35,7 @@ function MainContent() {
           <div className='hero-banner--box p-6'>
             <ImageRenderer src="/images/logo-TD-eng.svg" alt="Ticha & David logo" width={100} height={135} className={'mx-auto'} />
 
-            <h1 className='hidden text-0'>Ticha & David's Wedding Invitation'</h1>
+            <h1 className='hidden text-0'>Ticha & David&apos;s Wedding Invitation</h1>
 
             <div className='hero-banner--heading text-center'>
               <div className='relative'>
@@ -43,7 +43,7 @@ function MainContent() {
                   <ImageRenderer src="/images/flower-yellow.png" alt="Lovely guest" width={144} className={'mx-auto absolute -bottom-22 md:-bottom-16 right-1/3 md:-right-[25%]'} />
                 </span>
               </div>
-              <p className='text-3xl md:text-4xl'>You're Invited to</p>
+              <p className='text-3xl md:text-4xl'>You&apos;re invited to</p>
               <ImageRenderer src="/images/logo-ticha-david-eng.svg" alt="Ticha & David" width={500} className={'block my-12 mx-auto p-10 md:p-0'} />
             </div>
 
@@ -68,7 +68,7 @@ function MainContent() {
       <section className='section about relative p-7'>
         <div className='section-container'>
           <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 2" width={144} className={'table mx-auto'} />
-          <h2 className='text-center text-4xl md:text-6xl'>It's <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> Days from now</h2>
+          <h2 className='text-center text-4xl md:text-6xl'>It&apos;s <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> Days from now</h2>
         </div>
       </section>
     </main>
