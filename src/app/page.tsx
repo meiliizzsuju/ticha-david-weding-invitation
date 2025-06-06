@@ -1,13 +1,11 @@
-import Image from "next/image";
 import Header from "../components/Header/Header"
 import MainContent from '../components/mainContent/MainContent';
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <MainContent />
-    </div>
-
+    <iframe
+      src="/old/index.html"
+      style={{ width: '100vw', height: '100vh', border: 'none' }}
+    />
   );
 }
