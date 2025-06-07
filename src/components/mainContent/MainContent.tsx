@@ -3,11 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
+import DynamicTable from 'utils/dynamicTable/DynamicTable';
 // import "../mainContent/mainContent.css";
 
 function MainContent() {
   const searchParams = useSearchParams();
-  const guestName = searchParams.get('guestName') || 'My lovely guest'; //http://localhost:3000/?guestName=Jane%20Jurairat
+  const guestName = searchParams.get('guestName') || 'My lovely guest';
 
 
   const [daysLeft, setDaysLeft] = useState<number | null>(null);
@@ -33,6 +34,15 @@ function MainContent() {
   const msg2 = "This isn't just a wedding—it's a gathering of the people we love most, in one of our favourite places. We understand that travelling from overseas is a big commitment, and while your presence would mean the world to us, we completely understand if you're unable to make the journey.";
   const msg3 = "Whether you're able to attend in person or join us in spirit from afar, we’re grateful to have you in our lives.";
 
+
+  const tableData = [
+    ['tbc', 'comming soon'],
+  ];
+
+  const tableHeading = [
+    "Time", "Event"
+  ]
+
   return (
     <main className='content'>
       <section className='section hero-banner relative py-10 overflow-hidden'>
@@ -55,7 +65,7 @@ function MainContent() {
             <div className='hero-banner--info text-center md:flex md:justify-center my-20'>
               <a className='hero-banner--info-item w-full md:max-w-2xs text-center' href='/others/mywedding.ics' download="mywedding.ics">
                 <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
-                <span className='hero-banner--heading-no block text-4xl leading-none'>24</span>
+                <span className='hero-banner--heading-no block text-4xl leading-none'>24<sup>th</sup></span>
                 <span className='text-2xl'>January 2026</span>
               </a>
               <a className='hero-banner--info-item w-full md:max-w-2xs text-center block mt-6 md:mt-0'
@@ -76,7 +86,7 @@ function MainContent() {
           <h2 className='text-center text-4xl md:text-6xl'>It&apos;s <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> days from now</h2>
 
           <div className='lg:flex'>
-            <div className='mt-10 lg:w-2/3 lg:pr-10'>
+            <div className='mt-10 md:mt-15 lg:w-2/3 lg:pr-10'>
               <p className='my-1 text-xl'>{msg1}</p>
               <p className='my-2 text-[28px]'>{msg2}</p>
               <p className='my-1 text-xl'>{msg3}</p>
@@ -94,6 +104,42 @@ function MainContent() {
         <ImageRenderer src="/images/par-flower-1.png" alt="Decor 4" width={240} className={'w-[30%] lg:w-[240px] lg:absolute mt-20'} />
       </section>
 
+      <section className='section relative p-10 pb-40 lg:py-20 lg:pb-60 '>
+        <h3 className='text-center text-4xl md:text-6xl'>Wedding Details</h3>
+        <div className='section-container'>
+          <div className='mt-10 md:mt-15 max-w-90 mx-auto md:max-w-full md:flex md:items-center md:justify-around'>
+            <a className='flex flex-row items-center md:pr-2' href='/others/mywedding.ics' download="mywedding.ics">
+              <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
+              <div className='flex flex-col'>
+                <span className='text-xl'>24<sup>th</sup> January 2026</span>
+                <span className='text-xs'>Click here to save the date!</span>
+              </div>
+            </a>
+            <a className='flex flex-row items-center mt-6 md:mt-0 md:pr-2'
+              href='https://maps.app.goo.gl/5cDWsQYiatFXiQt26' target='_blank'>
+              <ImageRenderer src="/images/ico-location.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
+              <div className='flex flex-col'>
+                <span className='text-xl leading-none'>Cross Chiang Mai <br />Riverside Resort</span>
+                <span className='text-xs'>Click here to get the map</span>
+              </div>
+            </a>
+            <div className='flex flex-row items-center mt-6 md:mt-0 md:pr-2'>
+              <ImageRenderer src="/images/ico-dress.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
+              <div className='flex flex-col'>
+                <p className='text-xl leading-none'>Bring the best of you! <br />No colour them just be yourself.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className='mt-10 md:mt-15 max-w-[570px] mx-auto'>
+            <DynamicTable data={tableData} headings={tableHeading} />
+          </div>
+        </div>
+
+        <ImageRenderer src="/images/par-flower-2.png" alt="Decor 5" width={180} className={'hidden lg:block absolute top-[50%]'} />
+        <ImageRenderer src="/images/par-flower-3.png" alt="Decor 6" width={180} className={'absolute bottom-0 right-0'} />
+
+      </section>
     </main>
   )
 }

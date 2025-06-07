@@ -37,6 +37,13 @@ body {
   line-height: 1.4;
 }
 
+p,th,td{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+
 .font-hand-writing{
   font-family: 'Gautreaux', sans-serif;
   font-weight: 400;
@@ -48,4 +55,9 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.table-border{
+  border-bottom: 1px solid #D9D4CF;
 }
