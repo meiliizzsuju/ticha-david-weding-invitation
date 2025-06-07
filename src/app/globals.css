@@ -60,3 +60,10 @@ p,th,td{
 .table-border{
   border-bottom: 1px solid #D9D4CF;
 }
+
+.button{
+  padding: 1em 2em;
+  color: #F3EEE9;
+  background-color: #DD813A;
+  border-radius: 8px;
+}

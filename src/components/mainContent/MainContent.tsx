@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
 import DynamicTable from 'utils/dynamicTable/DynamicTable';
+import { Button } from '@headlessui/react';
 // import "../mainContent/mainContent.css";
 
 function MainContent() {
@@ -40,6 +41,9 @@ function MainContent() {
   const giftmsg3 = "We appreciate the time, effort, and cost it takes to travel, and we do not expect anything more.";
 
   const travelMsg = "We’re working on tips to help you plan your trip to Chiang Mai, including recommended places to stay and what to explore while you're here. Stay tuned!";
+
+  const rsvpMsg1 = "To help us plan and make your experience as comfortable as possible, please let us know if you'll be joining us in Chiang Mai.";
+  const rsvpMsg2 = "Kindly fill out the RSVP form — it only takes a minute!";
 
 
   const tableData = [
@@ -182,6 +186,30 @@ function MainContent() {
 
         <ImageRenderer src="/images/par-travel-1.png" alt="Travel image decor 1" width={180} className={'absolute top-[30%] md:top-[50%] left-[5%]'} />
         <ImageRenderer src="/images/par-travel-2.png" alt="Travel image decor 2" width={180} className={'hidden md:block absolute -bottom-[20px] md:w-[230px] right-0 lg:right-[5%]'} />
+      </section>
+
+
+      <section className='section relative p-10 lg:py-20 '>
+        <div className='section-container'>
+          <div className='lg:flex lg:items-center'>
+            <div className='lg:w-2/5'>
+              <h3 className='text-4xl md:text-5xl'>RSVP</h3>
+              <div className='mt-10 md:mt-15 lg:pr-10'>
+                <p className='my-1 text-xl'>{rsvpMsg1}</p>
+                <p className='my-1 text-xl'>{rsvpMsg2}</p>
+              </div>
+            </div>
+            <div className='mt-10 lg:w-3/5'>
+              <div className='table mx-auto relative'>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW7wD7VF-gKww7BLKyC1-rs5kEiYv0ew5rtlEwh7WFL9_kUA/viewform?usp=header" target='_blank'
+                  className='button'
+                >
+                  RSVP Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )
