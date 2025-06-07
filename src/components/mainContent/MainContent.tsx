@@ -28,6 +28,13 @@ function MainContent() {
     return () => clearInterval(interval);
   }, []);
 
+  // tempfixlint
+  const msg1 = "We're getting married in beautiful Chiang Mai, Thailand, and we'd be truly honoured to celebrate this special day with you.";
+  const msg2 = "This isn't just a wedding—it's a gathering of the people we love most, in one of our favourite places. We understand that travelling from overseas is a big commitment, and while your presence would mean the world to us, we completely understand if you're unable to make the journey.";
+  const msg3 = "Whether you're able to attend in person or join us in spirit from afar, we’re grateful to have you in our lives.";
+
+  const heading1 = "Let’s get sentimental or silly!";
+
   return (
     <main className='content'>
       <section className='section hero-banner relative py-10 overflow-hidden'>
@@ -72,9 +79,9 @@ function MainContent() {
 
           <div className='lg:flex'>
             <div className='mt-10 lg:w-2/3 lg:pr-10'>
-              <p className='my-1 text-xl'>We're getting married in beautiful Chiang Mai, Thailand, and we'd be truly honoured to celebrate this special day with you.</p>
-              <p className='my-2 text-[28px]'>This isn't just a wedding—it's a gathering of the people we love most, in one of our favourite places. We understand that travelling from overseas is a big commitment, and while your presence would mean the world to us, we completely understand if you're unable to make the journey.</p>
-              <p className='my-1 text-xl'>Whether you're able to attend in person or join us in spirit from afar, we’re grateful to have you in our lives.</p>
+              <p className='my-1 text-xl'>{msg1}</p>
+              <p className='my-2 text-[28px]'>{msg2}</p>
+              <p className='my-1 text-xl'>{msg3}</p>
             </div>
 
             <div className='mt-10 lg:w-1/3'>
@@ -89,6 +96,12 @@ function MainContent() {
         <ImageRenderer src="/images/par-flower-1.png" alt="Decor 4" width={240} className={'w-[30%] lg:w-[240px] lg:absolute mt-20'} />
       </section>
 
+      <section className='section relative p-10 lg:py-20'>
+        <div className='section-container'>
+          <h3 className='text-center text-4xl md:text-6xl'>{heading1}</h3>
+
+        </div>
+      </section>
     </main>
   )
 }
