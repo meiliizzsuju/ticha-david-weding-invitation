@@ -8,9 +8,9 @@ const Header: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
   const options = [
-    { label: 'English', href: '/', onSelect: () => setSelectedLanguage('EN') },
-    { label: 'Thai', href: '/th', onSelect: () => setSelectedLanguage('TH') },
-    { label: 'Korean', href: '/kr', onSelect: () => setSelectedLanguage('KR') },
+    { label: 'English', lang: 'en' },
+    { label: 'ภาษาไทย', lang: 'th' },
+    { label: '한국어', lang: "kr" },
   ];
 
 
