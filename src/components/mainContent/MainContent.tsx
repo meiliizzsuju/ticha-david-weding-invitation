@@ -39,6 +39,8 @@ function MainContent() {
   const giftmsg2 = "Your presence is the only gift we need. Truly, we’re just so happy to celebrate with you—no need to bring anything but your smiles and good vibes.";
   const giftmsg3 = "We appreciate the time, effort, and cost it takes to travel, and we do not expect anything more.";
 
+  const travelMsg = "We’re working on tips to help you plan your trip to Chiang Mai, including recommended places to stay and what to explore while you're here. Stay tuned!";
+
 
   const tableData = [
     ['tbc', 'coming soon'],
@@ -87,7 +89,7 @@ function MainContent() {
 
       <section className='section about relative p-10 lg:py-20'>
         <div className='section-container'>
-          <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 3" width={144} className={'table mx-auto'} />
+          <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 3" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
           <h2 className='text-center text-4xl md:text-6xl'>It&apos;s <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> days from now</h2>
 
           <div className='lg:flex'>
@@ -110,6 +112,7 @@ function MainContent() {
       </section>
 
       <section className='section relative p-10 pb-40 lg:py-20 lg:pb-60'>
+        <ImageRenderer src="/images/detail-heading-icon.png" alt="Wedding Details decor" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
         <h3 className='text-center text-4xl md:text-5xl'>Wedding Details</h3>
         <div className='section-container'>
           <div className='mt-10 md:mt-15 max-w-90 mx-auto md:max-w-full md:flex md:items-center md:justify-around'>
@@ -165,6 +168,20 @@ function MainContent() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='section relative p-10 md:pb-20 lg:py-20 lg:pb-40 '>
+        <div className='section-container'>
+          <ImageRenderer src="/images/travel-heading-icon.png" alt="Travel & Accommodation decor" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
+          <h3 className='text-center text-4xl md:text-5xl'>Travel & Accommodation</h3>
+          <div className='mt-10 md:mt-15 relative'>
+            <ImageRenderer src="/images/vector-luggage.svg" alt="Lugguage" width={670} className={'table mx-auto w-full max-w-[670px]'} />
+            <p className='mt-10 md:absolute md:w-[290px] md:text-center md:p-5 md:top-[30%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2'>{travelMsg}</p>
+          </div>
+        </div>
+
+        <ImageRenderer src="/images/par-travel-1.png" alt="Travel image decor 1" width={180} className={'absolute top-[30%] md:top-[50%] left-[5%]'} />
+        <ImageRenderer src="/images/par-travel-2.png" alt="Travel image decor 2" width={180} className={'hidden md:block absolute -bottom-[20px] md:w-[230px] right-0 lg:right-[5%]'} />
       </section>
     </main>
   )
