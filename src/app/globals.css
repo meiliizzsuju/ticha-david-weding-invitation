@@ -10,7 +10,7 @@
 }
 
 :root {
-  --background: #F6F3F3;
+  --background: #F3EEE8;
   --foreground: #583B39;
 }
 
@@ -29,7 +29,7 @@
 }
 
 body {
-  background: var(--background);
+  background: #F3EEE8;
   color: #583B39;
   font-family: "Libre Baskerville", serif;
   font-weight: 400;

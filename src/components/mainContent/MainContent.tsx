@@ -45,6 +45,7 @@ function MainContent() {
   const rsvpMsg1 = "To help us plan and make your experience as comfortable as possible, please let us know if you'll be joining us in Chiang Mai.";
   const rsvpMsg2 = "Kindly fill out the RSVP form — it only takes a minute!";
 
+  const galMsg = "We'll upload our favorite moments here after the big day—check back soon!";
 
   const tableData = [
     ['tbc', 'coming soon'],
@@ -207,6 +208,22 @@ function MainContent() {
                   RSVP Now
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='section relative p-10 lg:py-20 overflow-hidden'>
+        <div className='section-container'>
+          <h3 className='text-4xl md:text-5xl text-center'>Photo Gallery</h3>
+
+          <div className='mt-10 md:mt-15 lg:pr-10'>
+            <div className='relative'>
+              <div className='relative'>
+                <ImageRenderer src="/images/gal-img.png" alt="Photo gallery holder" width={1180} className={'w-full'} />
+                <ImageRenderer src="/images/par-gal-img.png" alt="Photo gallery decor" width={198} className={'w-[20%] absolute bottom-0 -left-10'} />
+              </div>
+              <p className='mt-10 text-2xl md:absolute md:w-[300px] md:text-center md:p-5 md:top-[28%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rotate-2'>{galMsg}</p>
             </div>
           </div>
         </div>
