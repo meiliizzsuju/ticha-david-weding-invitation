@@ -39,8 +39,8 @@ function MainContent() {
 
             <div className='hero-banner--heading text-center'>
               <div className='relative'>
-                <span className='hero-banner--guest-name relative table mx-auto font-hand-writing block my-20 text-6xl md:text-8xl'>{guestName}
-                  <ImageRenderer src="/images/flower-yellow.png" alt="Lovely guest" width={144} className={'mx-auto absolute -bottom-22 md:-bottom-16 right-1/3 md:-right-[25%]'} />
+                <span className='hero-banner--guest-name relative table mx-auto font-hand-writing block my-20 mb-5 md:mb-20 text-6xl md:text-8xl'>{guestName}
+                  <ImageRenderer src="/images/flower-yellow.png" alt="Lovely guest" width={144} className={'mx-auto mt-5 md:mt-0 md:absolute  md:-bottom-16 md:-right-[25%]'} />
                 </span>
               </div>
               <p className='text-3xl md:text-4xl'>You&apos;re invited to</p>
@@ -61,8 +61,8 @@ function MainContent() {
             </div>
           </div>
         </div>
-        <ImageRenderer src="/images/banner-flower-1.png" alt="Decor 1" width={420} className={'absolute top-0 right-0 w-xs md:w-xl'} />
-        <ImageRenderer src="/images/banner-flower-2.png" alt="Decor 1" width={420} className={'absolute bottom-0 left-0 w-xs md:w-xl'} />
+        <ImageRenderer src="/images/banner-flower-1.png" alt="Decor 1" width={420} className={'absolute top-0 right-0 w-1/2 lg:w-auto'} />
+        <ImageRenderer src="/images/banner-flower-2.png" alt="Decor 1" width={420} className={'absolute bottom-0 left-0 w-1/2 lg:w-auto'} />
       </section>
 
       <section className='section about relative p-7'>

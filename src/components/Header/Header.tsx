@@ -15,7 +15,7 @@ const Header: React.FC = () => {
 
 
   return (
-    <header className="flex items-center justify-between p-4 md:px-10 fixed z-10">
+    <header className="flex items-center justify-between p-4 md:px-10 fixed z-20">
       <div className='lang-container flex'>
         <ImageRenderer src="/images/icon-lang.svg" alt="SVG Logo" width={20} height={20} />
         <DropdownComponent
