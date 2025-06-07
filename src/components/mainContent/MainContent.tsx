@@ -3,7 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
-// import "../mainContent/mainContent.css";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'My Blog',
+  description: "Ticha & David's Wedding Invitation",
+}
 
 function MainContent() {
   const searchParams = useSearchParams();
