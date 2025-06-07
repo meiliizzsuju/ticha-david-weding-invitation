@@ -65,10 +65,26 @@ function MainContent() {
         <ImageRenderer src="/images/banner-flower-2.png" alt="Decor 1" width={420} className={'absolute bottom-0 left-0 w-1/2 lg:w-auto'} />
       </section>
 
-      <section className='section about relative p-7'>
+      <section className='section about relative p-10 lg:py-20'>
         <div className='section-container'>
           <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 2" width={144} className={'table mx-auto'} />
           <h2 className='text-center text-4xl md:text-6xl'>It&apos;s <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> Days from now</h2>
+
+          <div className='lg:flex'>
+            <div className='mt-10 lg:w-2/3 lg:pr-10'>
+              <p className='my-1 text-xl'>We're getting married in beautiful Chiang Mai, Thailand, and we'd be truly honoured to celebrate this special day with you.</p>
+              <p className='my-2 text-[28px]'>This isn't just a wedding—it's a gathering of the people we love most, in one of our favourite places. We understand that travelling from overseas is a big commitment, and while your presence would mean the world to us, we completely understand if you're unable to make the journey.</p>
+              <p className='my-1 text-xl'>Whether you're able to attend in person or join us in spirit from afar, we’re grateful to have you in our lives.</p>
+            </div>
+
+            <div className='mt-10 lg:w-1/3'>
+              <div className='table mx-auto relative'>
+                <ImageRenderer src="/images/about.png" alt="Decor 3" width={220} className={'table mx-auto'} />
+                <ImageRenderer src="/images/tish.png" alt="Tish" width={100} className={'absolute -bottom-[25px] -left-[70px]'} />
+                <ImageRenderer src="/images/dave.png" alt="Dave" width={100} className={'absolute -top-[25px] -right-[75px]'} />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
