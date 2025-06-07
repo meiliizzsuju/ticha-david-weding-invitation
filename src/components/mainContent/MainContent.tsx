@@ -41,7 +41,7 @@ function MainContent() {
 
 
   const tableData = [
-    ['tbc', 'comming soon'],
+    ['tbc', 'coming soon'],
   ];
 
   const tableHeading = [
