@@ -62,12 +62,12 @@ function MainContent() {
           </div>
         </div>
         <ImageRenderer src="/images/banner-flower-1.png" alt="Decor 1" width={420} className={'absolute top-0 right-0 w-1/2 lg:w-auto'} />
-        <ImageRenderer src="/images/banner-flower-2.png" alt="Decor 1" width={420} className={'absolute bottom-0 left-0 w-1/2 lg:w-auto'} />
+        <ImageRenderer src="/images/banner-flower-2.png" alt="Decor 2" width={420} className={'absolute bottom-0 left-0 w-1/2 lg:w-auto'} />
       </section>
 
       <section className='section about relative p-10 lg:py-20'>
         <div className='section-container'>
-          <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 2" width={144} className={'table mx-auto'} />
+          <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 3" width={144} className={'table mx-auto'} />
           <h2 className='text-center text-4xl md:text-6xl'>It&apos;s <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> Days from now</h2>
 
           <div className='lg:flex'>
@@ -86,7 +86,9 @@ function MainContent() {
             </div>
           </div>
         </div>
+        <ImageRenderer src="/images/par-flower-1.png" alt="Decor 4" width={240} className={'w-[30%] lg:w-[240px] lg:absolute mt-20'} />
       </section>
+
     </main>
   )
 }
