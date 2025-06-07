@@ -4,8 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
 import DynamicTable from 'utils/dynamicTable/DynamicTable';
-import { Button } from '@headlessui/react';
-// import "../mainContent/mainContent.css";
 
 function MainContent() {
   const searchParams = useSearchParams();

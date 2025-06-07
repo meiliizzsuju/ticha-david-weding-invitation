@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import Header from '../../components/Header/Header';
 import MainContent from '../../components/mainContent/MainContent';
 import type { Metadata } from 'next';
+import Footer from '../../components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: "Ticha & David's Wedding Invitation",
@@ -35,6 +36,7 @@ export default function WeddingLanding() {
       <Suspense fallback={<div>Loading...</div>}>
         <MainContent />
       </Suspense>
+      <Footer />
     </div>
   );
 }
