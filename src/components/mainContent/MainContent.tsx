@@ -94,7 +94,7 @@ function MainContent() {
 
       <section className='section about relative p-10 lg:py-20'>
         <div className='section-container'>
-          <ImageRenderer src="/images/section2-flower-top.png" alt="Decor 3" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
+          <ImageRenderer src="/images/section2-flower-top.svg" alt="Decor 3" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
           <h2 className='text-center text-4xl md:text-6xl'>It&apos;s <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> days from now</h2>
 
           <div className='lg:flex'>
@@ -117,7 +117,7 @@ function MainContent() {
       </section>
 
       <section className='section relative p-10 pb-40 lg:py-20 lg:pb-60'>
-        <ImageRenderer src="/images/detail-heading-icon.png" alt="Wedding Details decor" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
+        <ImageRenderer src="/images/detail-heading-icon.png" alt="Wedding Details decor" width={144} className={'table mx-auto mb-3 w-[90px] md:w-[144]'} />
         <h3 className='text-center text-4xl md:text-5xl'>Wedding Details</h3>
         <div className='section-container'>
           <div className='mt-10 md:mt-15 max-w-90 mx-auto md:max-w-full md:flex md:items-center md:justify-around'>
@@ -177,7 +177,7 @@ function MainContent() {
 
       <section className='section relative p-10 md:pb-20 lg:py-20 lg:pb-40 '>
         <div className='section-container'>
-          <ImageRenderer src="/images/travel-heading-icon.png" alt="Travel & Accommodation decor" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
+          <ImageRenderer src="/images/travel-heading-icon.svg" alt="Travel & Accommodation decor" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
           <h3 className='text-center text-4xl md:text-5xl'>Travel & Accommodation</h3>
           <div className='mt-10 md:mt-15 relative'>
             <ImageRenderer src="/images/vector-luggage.svg" alt="Lugguage" width={670} className={'table mx-auto w-full max-w-[670px]'} />
@@ -185,7 +185,7 @@ function MainContent() {
           </div>
         </div>
 
-        <ImageRenderer src="/images/par-travel-1.png" alt="Travel image decor 1" width={180} className={'absolute top-[30%] md:top-[50%] left-[5%]'} />
+        <ImageRenderer src="/images/par-travel-1.svg" alt="Travel image decor 1" width={180} className={'absolute top-[30%] md:top-[50%] left-[5%]'} />
         <ImageRenderer src="/images/par-travel-2.png" alt="Travel image decor 2" width={180} className={'hidden md:block absolute -bottom-[20px] md:w-[230px] right-0 lg:right-[5%]'} />
       </section>
 
@@ -226,6 +226,8 @@ function MainContent() {
               <p className='mt-10 text-2xl md:absolute md:w-[300px] md:text-center md:p-5 md:top-[28%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rotate-2'>{galMsg}</p>
             </div>
           </div>
+
+          <ImageRenderer src="/images/gal-decor.svg" alt="Photo gallery decor" width={142} className={'ml-auto mt-20 md:mr-40'} />
         </div>
       </section>
     </main>
