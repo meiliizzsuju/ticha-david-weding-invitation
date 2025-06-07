@@ -8,9 +8,6 @@ type DynamicTableProps = {
 };
 
 const DynamicTable: React.FC<DynamicTableProps> = ({ data, headings }) => {
-  const rows = data.length;
-  const columns = data[0]?.length || 0;
-
 
   return (
     <div className="overflow-x-auto">

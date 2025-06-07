@@ -35,6 +35,11 @@ function MainContent() {
   const msg3 = "Whether you're able to attend in person or join us in spirit from afar, we’re grateful to have you in our lives.";
 
 
+  const giftmsg1 = "In some cultures, it’s customary to give a gift or money at weddings. We want to kindly let you know that:";
+  const giftmsg2 = "Your presence is the only gift we need. Truly, we’re just so happy to celebrate with you—no need to bring anything but your smiles and good vibes.";
+  const giftmsg3 = "We appreciate the time, effort, and cost it takes to travel, and we do not expect anything more.";
+
+
   const tableData = [
     ['tbc', 'comming soon'],
   ];
@@ -104,8 +109,8 @@ function MainContent() {
         <ImageRenderer src="/images/par-flower-1.png" alt="Decor 4" width={240} className={'w-[30%] lg:w-[240px] lg:absolute mt-20'} />
       </section>
 
-      <section className='section relative p-10 pb-40 lg:py-20 lg:pb-60 '>
-        <h3 className='text-center text-4xl md:text-6xl'>Wedding Details</h3>
+      <section className='section relative p-10 pb-40 lg:py-20 lg:pb-60'>
+        <h3 className='text-center text-4xl md:text-5xl'>Wedding Details</h3>
         <div className='section-container'>
           <div className='mt-10 md:mt-15 max-w-90 mx-auto md:max-w-full md:flex md:items-center md:justify-around'>
             <a className='flex flex-row items-center md:pr-2' href='/others/mywedding.ics' download="mywedding.ics">
@@ -139,6 +144,27 @@ function MainContent() {
         <ImageRenderer src="/images/par-flower-2.png" alt="Decor 5" width={180} className={'hidden lg:block absolute top-[50%]'} />
         <ImageRenderer src="/images/par-flower-3.png" alt="Decor 6" width={180} className={'absolute bottom-0 right-0'} />
 
+      </section>
+
+
+      <section className='section relative p-10 lg:py-20 '>
+        <div className='section-container'>
+          <div className='lg:flex'>
+            <div className='lg:w-3/5 lg:order-2'>
+              <h3 className='text-4xl md:text-5xl'>A Note on Gifts</h3>
+              <div className='mt-10 md:mt-15 lg:pr-10'>
+                <p className='my-1 text-xl'>{giftmsg1}</p>
+                <p className='my-2 text-[28px] leading-[1.2]'>{giftmsg2}</p>
+                <p className='my-1 text-xl'>{giftmsg3}</p>
+              </div>
+            </div>
+            <div className='mt-10 lg:w-2/5 lg:order-1'>
+              <div className='table mx-auto relative'>
+                <ImageRenderer src="/images/img-gift.png" alt="Decor 7" width={220} className={'table mx-auto'} />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )
