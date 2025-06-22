@@ -1,0 +1,61 @@
+{
+  "WeddingPage": {
+    "PageTitle": "Ticha & David's Wedding Invitation",
+    "PageDescription": "You're invited to our wedding in Chiang Mai, Thailand!",
+    "PageContent": {
+      "Banner": {
+        "YouAreInvited": "You're invited to",
+        "DateNumber": "24<sup>th</sup>",
+        "DateMMMMYYYY": "January 2026",
+        "Location": "Cross Chiang Mai <br>Riverside Resort"
+      },
+      "About": {
+        "Title1": "It's",
+        "Title2": "days from now",
+        "Message1": "We're getting married in beautiful Chiang Mai, Thailand, and we'd be truly honoured to celebrate this special day with you.",
+        "Message2": "This isn't just a wedding—it's a gathering of the people we love most, in one of our favourite places. We understand that travelling from overseas is a big commitment, and while your presence would mean the world to us, we completely understand if you're unable to make the journey.",
+        "Message3": "Whether you're able to attend in person or join us in spirit from afar, we’re grateful to have you in our lives."
+      },
+      "Details": {
+        "Title": "Wedding Details",
+        "FullDate": "24th January 2026",
+        "DateClickCap": "Click here to save the date!",
+        "FullLocation": "Cross Chiang Mai <br>Riverside Resort",
+        "LoClickCap": "Click here to get the map",
+        "DressCodeMsg": "Bring the best of you! <br>No colour them just be yourself.",
+        "Table": {
+          "Heading": [
+            "Time",
+            "Event"
+          ],
+          "Data": [
+            [
+              "tbc",
+              "coming soon"
+            ]
+          ]
+        }
+      },
+      "GiftSection": {
+        "Title": "A Note on Gifts",
+        "Message1": "In some cultures, it’s customary to give a gift or money at weddings. We want to kindly let you know that:",
+        "Message2": "Your presence is the only gift we need. Truly, we’re just so happy to celebrate with you—no need to bring anything but your smiles and good vibes.",
+        "Message3": "We appreciate the time, effort, and cost it takes to travel, and we do not expect anything more."
+      },
+      "TravelAccom": {
+        "Title": "Travel & Accommodation",
+        "Message1": "We’re working on tips to help you plan your trip to Chiang Mai, including recommended places to stay and what to explore while you're here. Stay tuned!"
+      },
+      "Rsvp": {
+        "Title": "RSVP",
+        "Message1": "To help us plan and make your experience as comfortable as possible, please let us know if you'll be joining us in Chiang Mai. ",
+        "Message2": "Kindly fill out the RSVP form — it only takes a minute!",
+        "ButtonLabel": "RSVP NOW"
+      },
+      "Gallery": {
+        "Title": "Photo Gallery",
+        "Message1": "We'll upload our favorite moments here after the big day—check back soon!"
+      }
+    }
+  }
+}
