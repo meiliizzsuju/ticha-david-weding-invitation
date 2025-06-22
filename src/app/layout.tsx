@@ -27,6 +27,7 @@ export default async function RootLayout({
 
   const messages = await getMessages();
   const locale = await getLocale();
+  console.log("check this locale on app/layout >>>", locale)
 
   return (
     <html lang={locale}>

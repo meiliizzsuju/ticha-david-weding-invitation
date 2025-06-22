@@ -159,7 +159,7 @@ function MainContent({ content }: MainContentProps) {
               <ImageRenderer src="/images/ico-location.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
               <div className='flex flex-col'>
                 <span className='text-xl leading-none' dangerouslySetInnerHTML={{ __html: content.details.fullLocation }}></span>
-                <span className='text-xs'>{content.details.dateClickCap}</span>
+                <span className='text-xs'>{content.details.loClickCap}</span>
               </div>
             </a>
             <div className='flex flex-row items-center mt-6 md:mt-0 md:pr-2'>

@@ -1,12 +1,14 @@
 import { getRequestConfig } from "next-intl/server";
-import { cookies } from "next/headers";
 
-export default getRequestConfig(async () => {
-  // You can enhance this to detect cookie, browser, or pathname later
-  const locale = 'en'; // or detect from cookies, headers, etc.
+const DEFAULT_LOCALE = 'en'; // keep this consistent with next.config.ts
+
+export default getRequestConfig(async ({ locale }) => {
+  // fallback to 'en' if locale is undefined
+  const usedLocale = locale ?? 'en';
+  console.log("check this locale >>>>", usedLocale)
 
   return {
-    locale,
-    messages: (await import(`../messages/${locale}.json`)).default,
+    locale: usedLocale,
+    messages: (await import(`../messages/${usedLocale}.json`)).default,
   };
 });
