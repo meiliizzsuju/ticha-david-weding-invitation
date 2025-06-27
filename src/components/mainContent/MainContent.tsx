@@ -53,13 +53,13 @@ function MainContent() {
             <div className='hero-banner--info text-center md:flex md:justify-center my-20'>
               <a className='hero-banner--info-item w-full md:max-w-2xs text-center' href='/others/mywedding.ics' download="mywedding.ics">
                 <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
-                <span className='hero-banner--heading-no block text-4xl leading-none' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.DateNumber') }}></span>
+                <span className='hero-banner--heading-no block text-4xl leading-none mt-4' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.DateNumber') }}></span>
                 <span className='text-2xl'>{t('PageContent.Banner.DateMMMMYYYY')}</span>
               </a>
               <a className='hero-banner--info-item w-full md:max-w-2xs text-center block mt-6 md:mt-0'
                 href='https://maps.app.goo.gl/5cDWsQYiatFXiQt26' target='_blank'>
                 <ImageRenderer src="/images/ico-location.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
-                <span className='text-2xl' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.Location') }}></span>
+                <span className='text-2xl mt-4' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.Location') }}></span>
               </a>
             </div>
           </div>
@@ -76,7 +76,7 @@ function MainContent() {
           <div className='lg:flex'>
             <div className='mt-10 md:mt-15 lg:w-2/3 lg:pr-10'>
               <p className='my-1 text-xl'>{t('PageContent.About.Message1')}</p>
-              <p className='my-2 text-[28px]'>{t('PageContent.About.Message2')}</p>
+              <p className='my-4 text-[28px]'>{t('PageContent.About.Message2')}</p>
               <p className='my-1 text-xl'>{t('PageContent.About.Message3')}</p>
             </div>
 
@@ -141,7 +141,7 @@ function MainContent() {
               <h3 className='text-4xl md:text-5xl'>{t('PageContent.GiftSection.Title')}</h3>
               <div className='mt-10 md:mt-15 lg:pr-10'>
                 <p className='my-1 text-xl'>{t('PageContent.GiftSection.Message1')}</p>
-                <p className='my-2 text-[28px] leading-[1.2]'>{t('PageContent.GiftSection.Message2')}</p>
+                <p className='my-4 text-[28px] leading-[1.2]'>{t('PageContent.GiftSection.Message2')}</p>
                 <p className='my-1 text-xl'>{t('PageContent.GiftSection.Message3')}</p>
               </div>
             </div>
