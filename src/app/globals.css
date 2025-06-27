@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Thai:wght@100..900&display=swap'); */
 @import "tailwindcss";
 
 @font-face {
@@ -26,6 +26,20 @@
     --background: var(--background); /* force */
     --foreground: var(--foreground); /* force */
   }
+}
+
+body.lang-th {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+body.lang-th p,
+body.lang-th th,
+body.lang-th td {
+  font-family: "Noto Sans Thai", sans-serif;
 }
 
 body {
