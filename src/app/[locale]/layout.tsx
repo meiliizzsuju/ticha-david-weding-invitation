@@ -6,20 +6,16 @@ import '../globals.css';
 const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' });
 
-interface LayoutProps {
-  children: React.ReactNode;
-  params: { locale: string };
-}
-
 export default async function LocaleLayout(props: {
   children: React.ReactNode;
-  params: { locale: string };
+  // Explicitly define 'params' as a Promise to satisfy the compiler's expectation.
+  // This addresses the error: "Type '{ locale: string; }' is missing the
+  // following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]"
+  params: Promise<{ locale: string }>;
 }) {
-  // Explicitly await 'props.params' to satisfy the Next.js error message:
-  // "params should be awaited before using its properties."
-  // Promise.resolve() is used to safely await 'params' whether it's
-  // already a resolved object or a Promise-like object.
-  const resolvedParams = (await Promise.resolve(props.params)) as { locale: string };
+  // Await the 'params' Promise to get the resolved locale object.
+  // No need for Promise.resolve() wrapper anymore since 'params' is typed as a Promise.
+  const resolvedParams = await props.params;
   const locale = resolvedParams.locale;
 
   // Fetch messages based on the resolved locale. This part remains the same.
