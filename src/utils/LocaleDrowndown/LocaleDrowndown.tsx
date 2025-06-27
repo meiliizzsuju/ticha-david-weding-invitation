@@ -23,7 +23,6 @@ export interface DropdownOptions {
 }
 
 export const LocaleDropdownComponent: React.FC<DropdownOptions> = ({
-  buttonLabel,
   options,
   styling,
 }) => {

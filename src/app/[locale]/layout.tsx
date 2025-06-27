@@ -6,12 +6,13 @@ import '../globals.css';
 const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' });
 
+interface LayoutProps {
+  children: React.ReactNode;
+  params: { locale: string };
+}
+
 export default async function LocaleLayout(props: {
   children: React.ReactNode;
-  // The 'params' object is expected to have a 'locale' property.
-  // In some Next.js environments or versions, particularly with dynamic routes
-  // in async components, Next.js might expect 'params' itself to be awaited.
-  // The type definition remains the same, but the runtime access is adjusted.
   params: { locale: string };
 }) {
   // Explicitly await 'props.params' to satisfy the Next.js error message:

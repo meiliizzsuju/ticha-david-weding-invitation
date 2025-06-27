@@ -3,7 +3,6 @@ import Header from '../../../components/Header/Header';
 import MainContent from '../../../components/mainContent/MainContent';
 import type { Metadata } from 'next';
 import Footer from '../../../components/Footer/Footer';
-import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: "Ticha & David's Wedding Invitation",
@@ -31,7 +30,6 @@ export const metadata: Metadata = {
 };
 
 export default function WeddingLanding() {
-  const t = useTranslations("WeddingPage");
 
   return (
     <div>

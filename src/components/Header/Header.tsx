@@ -5,7 +5,7 @@ import { LocaleDropdownComponent } from '../../utils/LocaleDrowndown/LocaleDrown
 import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
 
 const Header: React.FC = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('EN');
+  const [selectedLanguage] = useState('EN');
 
   const options = [
     { label: 'English', lang: 'en' },
