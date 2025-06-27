@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const options = [
     { label: 'English', lang: 'en' },
     { label: 'ภาษาไทย', lang: 'th' },
-    { label: '한국어', lang: "kr" },
+    { label: '한국어', lang: 'kr' },
   ];
 
 

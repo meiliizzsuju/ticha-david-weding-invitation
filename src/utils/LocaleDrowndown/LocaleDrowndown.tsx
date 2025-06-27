@@ -36,14 +36,38 @@ export const LocaleDropdownComponent: React.FC<DropdownOptions> = ({
     ? styling.menuButtonClasses
     : 'inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50';
 
-  const router = useRouter(); // ✅ from next/navigation
-  const pathname = usePathname(); // ✅ full path string
-  const currentLocale = useLocale(); // ✅ current locale from next-intl
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const currentLocale = useLocale(); // Get the current active locale from next-intl
+
+  // Determine the label for the dropdown button based on the current locale
+  const currentLocaleLabel = options.find(
+    (option) => option.lang === currentLocale
+  )?.label || options[0]?.label || 'Language'; // Fallback to first option or 'Language'
 
   const changeLocale = (newLocale: string) => {
-    const segments = pathname.split('/');
-    segments[1] = newLocale; // Replace current locale
-    const newPath = segments.join('/');
+    // Get the path without the current locale prefix.
+    // Example: if pathname is '/th/wedding' and currentLocale is 'th',
+    // pathWithoutLocale becomes '/wedding'.
+    let pathWithoutLocale = pathname;
+    if (currentLocale && pathname.startsWith(`/${currentLocale}`)) {
+      pathWithoutLocale = pathname.substring(`/${currentLocale}`.length);
+    }
+
+    // Ensure pathWithoutLocale starts with a '/' for consistent URL construction,
+    // handling cases where it might be empty (e.g., from '/en' to '/th').
+    if (pathWithoutLocale === '') {
+      pathWithoutLocale = '/';
+    } else if (!pathWithoutLocale.startsWith('/')) {
+      pathWithoutLocale = '/' + pathWithoutLocale;
+    }
+
+    // Construct the new path: /newLocale/rest/of/path
+    // If pathWithoutLocale is just '/', don't append it to avoid '//'
+    const newPath = `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+
+    // Push the new path to trigger navigation and locale change
     router.push(newPath);
   };
 
@@ -51,7 +75,7 @@ export const LocaleDropdownComponent: React.FC<DropdownOptions> = ({
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className={menuButtonCss}>
-          {buttonLabel}
+          {currentLocaleLabel}
           <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
         </Menu.Button>
       </div>

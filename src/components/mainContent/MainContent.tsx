@@ -6,62 +6,12 @@ import ImageRenderer from '../../utils/imageRenderer/ImageRenderer';
 import DynamicTable from 'utils/dynamicTable/DynamicTable';
 import { useTranslations } from 'next-intl';
 
-interface MainContentProps {
-  content: {
-    banner: {
-      YouAreInvited: string;
-      DateNumber: string;
-      DateMMMMYYYY: string;
-      Location: string;
-    },
-    about: {
-      title1: string;
-      title2: string;
-      msg1: string;
-      msg2: string;
-      msg3: string;
-    },
-    details: {
-      titile: string;
-      fullDate: string;
-      dateClickCap: string;
-      fullLocation: string;
-      loClickCap: string;
-      dressCodeMsg: string;
-      table: {
-        heading: string[];
-        rows: string[][];
-      }
-    },
-    giftSec: {
-      title: string;
-      msg1: string;
-      msg2: string;
-      msg3: string;
-    },
-    travelAccom: {
-      title: string;
-      msg1: string;
-    },
-    rsvp: {
-      title: string;
-      msg1: string;
-      msg2: string;
-      btnLabel: string;
-    },
-    gallery: {
-      title: string;
-      msg1: string;
-    }
-  }
-}
 
-function MainContent({ content }: MainContentProps) {
+// The 'content' prop is no longer needed in the function signature
+function MainContent() {
   const searchParams = useSearchParams();
   const guestName = searchParams.get('guestName') || 'My lovely guest';
-
-  const t = useTranslations()
-
+  const t = useTranslations('WeddingPage');
 
   const [daysLeft, setDaysLeft] = useState<number | null>(null);
 
@@ -96,20 +46,20 @@ function MainContent({ content }: MainContentProps) {
                   <ImageRenderer src="/images/flower-yellow.png" alt="Lovely guest" width={144} className={'mx-auto mt-5 md:mt-0 md:absolute  md:-bottom-16 md:-right-[25%]'} />
                 </span>
               </div>
-              <p className='text-3xl md:text-4xl'>{content.banner.YouAreInvited}</p>
+              <p className='text-3xl md:text-4xl'>{t('PageContent.Banner.YouAreInvited')}</p>
               <ImageRenderer src="/images/logo-ticha-david-eng.svg" alt="Ticha & David" width={500} className={'block my-12 mx-auto p-10 md:p-0'} />
             </div>
 
             <div className='hero-banner--info text-center md:flex md:justify-center my-20'>
               <a className='hero-banner--info-item w-full md:max-w-2xs text-center' href='/others/mywedding.ics' download="mywedding.ics">
                 <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
-                <span className='hero-banner--heading-no block text-4xl leading-none' dangerouslySetInnerHTML={{ __html: content.banner.DateNumber }}></span>
-                <span className='text-2xl'>{content.banner.DateMMMMYYYY}</span>
+                <span className='hero-banner--heading-no block text-4xl leading-none' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.DateNumber') }}></span>
+                <span className='text-2xl'>{t('PageContent.Banner.DateMMMMYYYY')}</span>
               </a>
               <a className='hero-banner--info-item w-full md:max-w-2xs text-center block mt-6 md:mt-0'
                 href='https://maps.app.goo.gl/5cDWsQYiatFXiQt26' target='_blank'>
                 <ImageRenderer src="/images/ico-location.svg" alt="Date" width={48} className={'my-2 mx-auto'} />
-                <span className='text-2xl' dangerouslySetInnerHTML={{ __html: content.banner.Location }}></span>
+                <span className='text-2xl' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.Location') }}></span>
               </a>
             </div>
           </div>
@@ -121,13 +71,13 @@ function MainContent({ content }: MainContentProps) {
       <section className='section about relative p-10 lg:py-20'>
         <div className='section-container'>
           <ImageRenderer src="/images/section2-flower-top.svg" alt="Decor 3" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
-          <h2 className='text-center text-4xl md:text-6xl'>{content.about.title1} <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> {content.about.title2} </h2>
+          <h2 className='text-center text-4xl md:text-6xl'>{t('PageContent.About.Title1')} <span className='font-hand-writing text-8xl md:text-9xl'>{daysLeft !== null ? daysLeft : 'not many'}</span> {t('PageContent.About.Title2')} </h2>
 
           <div className='lg:flex'>
             <div className='mt-10 md:mt-15 lg:w-2/3 lg:pr-10'>
-              <p className='my-1 text-xl'>{content.about.msg1}</p>
-              <p className='my-2 text-[28px]'>{content.about.msg2}</p>
-              <p className='my-1 text-xl'>{content.about.msg3}</p>
+              <p className='my-1 text-xl'>{t('PageContent.About.Message1')}</p>
+              <p className='my-2 text-[28px]'>{t('PageContent.About.Message2')}</p>
+              <p className='my-1 text-xl'>{t('PageContent.About.Message3')}</p>
             </div>
 
             <div className='mt-10 lg:w-1/3'>
@@ -144,34 +94,37 @@ function MainContent({ content }: MainContentProps) {
 
       <section className='section relative p-10 pb-40 lg:py-20 lg:pb-60'>
         <ImageRenderer src="/images/detail-heading-icon.png" alt="Wedding Details decor" width={144} className={'table mx-auto mb-3 w-[90px] md:w-[144]'} />
-        <h3 className='text-center text-4xl md:text-5xl'>{content.details.titile}</h3>
+        <h3 className='text-center text-4xl md:text-5xl'>{t('PageContent.Details.Title')}</h3>
         <div className='section-container'>
           <div className='mt-10 md:mt-15 max-w-90 mx-auto md:max-w-full md:flex md:items-center md:justify-around'>
             <a className='flex flex-row items-center md:pr-2' href='/others/mywedding.ics' download="mywedding.ics">
               <ImageRenderer src="/images/ico-date.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
               <div className='flex flex-col'>
-                <span className='text-xl'>{content.details.fullDate}</span>
-                <span className='text-xs'>{content.details.dateClickCap}</span>
+                <span className='text-xl'>{t('PageContent.Details.FullDate')}</span>
+                <span className='text-xs'>{t('PageContent.Details.DateClickCap')}</span>
               </div>
             </a>
             <a className='flex flex-row items-center mt-6 md:mt-0 md:pr-2'
               href='https://maps.app.goo.gl/5cDWsQYiatFXiQt26' target='_blank'>
               <ImageRenderer src="/images/ico-location.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
               <div className='flex flex-col'>
-                <span className='text-xl leading-none' dangerouslySetInnerHTML={{ __html: content.details.fullLocation }}></span>
-                <span className='text-xs'>{content.details.loClickCap}</span>
+                <span className='text-xl leading-none' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Details.FullLocation') }}></span>
+                <span className='text-xs'>{t('PageContent.Details.LoClickCap')}</span>
               </div>
             </a>
             <div className='flex flex-row items-center mt-6 md:mt-0 md:pr-2'>
               <ImageRenderer src="/images/ico-dress.svg" alt="Date" width={48} className={'grow-0 mr-4'} />
               <div className='flex flex-col'>
-                <p className='text-xl leading-none' dangerouslySetInnerHTML={{ __html: content.details.dressCodeMsg }}></p>
+                <p className='text-xl leading-none' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Details.DressCodeMsg') }}></p>
               </div>
             </div>
           </div>
 
           <div className='mt-10 md:mt-15 max-w-[570px] mx-auto'>
-            <DynamicTable data={content.details.table.rows} headings={content.details.table.heading} />
+            <DynamicTable
+              data={t.raw('PageContent.Details.Table.Data')}
+              headings={t.raw('PageContent.Details.Table.Heading')}
+            />
           </div>
         </div>
 
@@ -185,11 +138,11 @@ function MainContent({ content }: MainContentProps) {
         <div className='section-container'>
           <div className='lg:flex'>
             <div className='lg:w-3/5 lg:order-2'>
-              <h3 className='text-4xl md:text-5xl'>{content.giftSec.title}</h3>
+              <h3 className='text-4xl md:text-5xl'>{t('PageContent.GiftSection.Title')}</h3>
               <div className='mt-10 md:mt-15 lg:pr-10'>
-                <p className='my-1 text-xl'>{content.giftSec.msg1}</p>
-                <p className='my-2 text-[28px] leading-[1.2]'>{content.giftSec.msg2}</p>
-                <p className='my-1 text-xl'>{content.giftSec.msg3}</p>
+                <p className='my-1 text-xl'>{t('PageContent.GiftSection.Message1')}</p>
+                <p className='my-2 text-[28px] leading-[1.2]'>{t('PageContent.GiftSection.Message2')}</p>
+                <p className='my-1 text-xl'>{t('PageContent.GiftSection.Message3')}</p>
               </div>
             </div>
             <div className='mt-10 lg:w-2/5 lg:order-1'>
@@ -204,10 +157,10 @@ function MainContent({ content }: MainContentProps) {
       <section className='section relative p-10 md:pb-20 lg:py-20 lg:pb-40 '>
         <div className='section-container'>
           <ImageRenderer src="/images/travel-heading-icon.svg" alt="Travel & Accommodation decor" width={144} className={'table mx-auto w-[90px] md:w-[144]'} />
-          <h3 className='text-center text-4xl md:text-5xl'>{content.travelAccom.title}</h3>
+          <h3 className='text-center text-4xl md:text-5xl'>{t('PageContent.TravelAccom.Title')}</h3>
           <div className='mt-10 md:mt-15 relative'>
             <ImageRenderer src="/images/vector-luggage.svg" alt="Lugguage" width={670} className={'table mx-auto w-full max-w-[670px]'} />
-            <p className='mt-10 md:absolute md:w-[290px] md:text-center md:p-5 md:top-[30%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2'>{content.travelAccom.msg1}</p>
+            <p className='mt-10 md:absolute md:w-[290px] md:text-center md:p-5 md:top-[30%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2'>{t('PageContent.TravelAccom.Message1')}</p>
           </div>
         </div>
 
@@ -220,10 +173,10 @@ function MainContent({ content }: MainContentProps) {
         <div className='section-container'>
           <div className='lg:flex lg:items-center'>
             <div className='lg:w-2/5'>
-              <h3 className='text-4xl md:text-5xl'>{content.rsvp.title}</h3>
+              <h3 className='text-4xl md:text-5xl'>{t('PageContent.Rsvp.Title')}</h3>
               <div className='mt-10 md:mt-15 lg:pr-10'>
-                <p className='my-1 text-xl'>{content.rsvp.msg1}</p>
-                <p className='my-1 text-xl'>{content.rsvp.msg2}</p>
+                <p className='my-1 text-xl'>{t('PageContent.Rsvp.Message1')}</p>
+                <p className='my-1 text-xl'>{t('PageContent.Rsvp.Message2')}</p>
               </div>
             </div>
             <div className='mt-10 lg:w-3/5'>
@@ -231,7 +184,7 @@ function MainContent({ content }: MainContentProps) {
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW7wD7VF-gKww7BLKyC1-rs5kEiYv0ew5rtlEwh7WFL9_kUA/viewform?usp=header" target='_blank'
                   className='button'
                 >
-                  {content.rsvp.btnLabel}
+                  {t('PageContent.Rsvp.ButtonLabel')}
                 </a>
               </div>
             </div>
@@ -241,7 +194,7 @@ function MainContent({ content }: MainContentProps) {
 
       <section className='section relative p-10 lg:py-20 overflow-hidden'>
         <div className='section-container'>
-          <h3 className='text-4xl md:text-5xl text-center'>{content.gallery.title}</h3>
+          <h3 className='text-4xl md:text-5xl text-center'>{t('PageContent.Gallery.Title')}</h3>
 
           <div className='mt-10 md:mt-15 lg:pr-10'>
             <div className='relative'>
@@ -249,7 +202,7 @@ function MainContent({ content }: MainContentProps) {
                 <ImageRenderer src="/images/gal-img.png" alt="Photo gallery holder" width={1180} className={'w-full'} />
                 <ImageRenderer src="/images/par-gal-img.png" alt="Photo gallery decor" width={198} className={'w-[20%] absolute bottom-0 -left-10'} />
               </div>
-              <p className='mt-10 text-2xl md:absolute md:w-[300px] md:text-center md:p-5 md:top-[28%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rotate-2'>{content.gallery.msg1}</p>
+              <p className='mt-10 text-2xl md:absolute md:w-[300px] md:text-center md:p-5 md:top-[28%] md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:rotate-2'>{t('PageContent.Gallery.Message1')}</p>
             </div>
           </div>
 

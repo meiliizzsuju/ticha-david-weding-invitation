@@ -4,7 +4,7 @@ const DEFAULT_LOCALE = 'en'; // keep this consistent with next.config.ts
 
 export default getRequestConfig(async ({ locale }) => {
   // fallback to 'en' if locale is undefined
-  const usedLocale = locale ?? 'en';
+  const usedLocale = locale ?? DEFAULT_LOCALE;
   console.log("check this locale >>>>", usedLocale)
 
   return {

@@ -7,7 +7,7 @@
         "YouAreInvited": "You're invited to",
         "DateNumber": "24<sup>th</sup>",
         "DateMMMMYYYY": "January 2026",
-        "Location": "Cross Chiang Mai <br>Riverside Resort"
+        "Location": "Cross Chiang Mai <br/>Riverside Resort"
       },
       "About": {
         "Title1": "It's",
@@ -20,9 +20,9 @@
         "Title": "Wedding Details",
         "FullDate": "24th January 2026",
         "DateClickCap": "Click here to save the date!",
-        "FullLocation": "Cross Chiang Mai <br>Riverside Resort",
+        "FullLocation": "Cross Chiang Mai <br/>Riverside Resort",
         "LoClickCap": "Click here to get the map",
-        "DressCodeMsg": "Bring the best of you! <br>No colour them just be yourself.",
+        "DressCodeMsg": "Bring the best of you! <br/>No colour them just be yourself.",
         "Table": {
           "Heading": [
             "Time",
