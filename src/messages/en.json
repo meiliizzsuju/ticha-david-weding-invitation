@@ -32,8 +32,20 @@
           ],
           "Data": [
             [
-              "tbc",
-              "coming soon"
+              "2.30 pm",
+              "Guest Arrival"
+            ],
+            [
+              "3 pm",
+              "Ceremony Begins"
+            ],
+            [
+              "10 pm",
+              "Event Wrap-Up"
+            ],
+            [
+              "More details",
+              "To Be Confirmed"
             ]
           ]
         }
