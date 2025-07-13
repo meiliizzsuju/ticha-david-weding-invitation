@@ -7,7 +7,9 @@
         "YouAreInvited": "You're invited to",
         "DateNumber": "24<sup>th</sup>",
         "DateMMMMYYYY": "January 2026",
-        "Location": "Cross Chiang Mai <br/>Riverside Resort"
+        "Location": "Cross Chiang Mai <br/>Riverside Resort",
+        "Remarkmsg1": "Our sincere apologies for not being able to invite you in person.",
+        "Remarkmsg2": "Please accept our heartfelt invitation and forgive us if we were unable to reach out to you personally."
       },
       "About": {
         "Title1": "It's",

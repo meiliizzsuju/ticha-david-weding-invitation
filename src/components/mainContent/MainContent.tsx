@@ -62,6 +62,8 @@ function MainContent() {
                 <span className='text-2xl mt-4' dangerouslySetInnerHTML={{ __html: t.raw('PageContent.Banner.Location') }}></span>
               </a>
             </div>
+            <p className='text-center'>{t('PageContent.Banner.Remarkmsg1')}</p>
+            <p className='text-center text-sm'>{t('PageContent.Banner.Remarkmsg2')}</p>
           </div>
         </div>
         <ImageRenderer src="/images/banner-flower-1.png" alt="Decor 1" width={420} className={'absolute top-0 right-0 w-1/2 lg:w-auto'} />
