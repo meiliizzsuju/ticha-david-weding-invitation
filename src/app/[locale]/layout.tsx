@@ -33,6 +33,13 @@ const gothicA1 = Gothic_A1({
   display: 'swap', // Recommended for font loading performance
 });
 
+const notoSerif = Noto_Serif({
+  subsets: ['latin'],
+  weight: ['400', '700'], // Adjust to the weights you use
+  variable: '--font-noto-serif',
+  display: 'swap',
+});
+
 type SupportedLocale = 'th' | 'kr' | 'en';
 
 export default async function LocaleLayout(props: {
@@ -53,6 +60,7 @@ export default async function LocaleLayout(props: {
     notoSansThai.variable,
     libreBaskerville.variable,
     gothicA1.variable,
+    notoSerif.variable,
   ].join(' ');
 
   const localeClassMap: Record<SupportedLocale, string> = {
