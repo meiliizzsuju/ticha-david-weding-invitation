@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Geist, Geist_Mono } from 'next/font/google';
 // Import all desired Google Fonts from next/font/google
-import { Noto_Sans_Thai, Libre_Baskerville, Gothic_A1 } from 'next/font/google';
+import { Noto_Sans_Thai, Libre_Baskerville, Gothic_A1, Noto_Serif } from 'next/font/google';
 import '../globals.css';
 
 const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
@@ -33,6 +33,8 @@ const gothicA1 = Gothic_A1({
   display: 'swap', // Recommended for font loading performance
 });
 
+type SupportedLocale = 'th' | 'kr' | 'en';
+
 export default async function LocaleLayout(props: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -53,9 +55,13 @@ export default async function LocaleLayout(props: {
     gothicA1.variable,
   ].join(' ');
 
-  // Conditionally apply the 'lang-th' class based on the current locale.
-  // This class is used in globals.css to apply the Noto Sans Thai font specifically.
-  const bodyClassName = `${allFontVariables} ${locale === 'th' ? 'lang-th' : ''}`;
+  const localeClassMap: Record<SupportedLocale, string> = {
+    th: 'lang-th',
+    kr: 'lang-kr',
+    en: '', // Optional: define empty if no special class
+  };
+
+  const bodyClassName = `${allFontVariables} ${localeClassMap[locale as SupportedLocale]}`;
 
   return (
     <html lang={locale}>

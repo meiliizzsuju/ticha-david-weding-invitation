@@ -36,10 +36,22 @@ body.lang-th {
   font-variation-settings: "wdth" 100;
 }
 
+.lang-th .font-hand-writing,
 body.lang-th p,
 body.lang-th th,
 body.lang-th td {
   font-family: "Noto Sans Thai", sans-serif;
+}
+
+body.lang-kr {
+  font-family: "Noto Serif KR", serif;
+}
+
+.lang-kr .font-hand-writing,
+body.lang-kr p,
+body.lang-kr th,
+body.lang-kr td {
+  font-family: "Noto Serif KR", serif;
 }
 
 body {
