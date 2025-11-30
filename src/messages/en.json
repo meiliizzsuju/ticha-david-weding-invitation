@@ -32,20 +32,28 @@
           ],
           "Data": [
             [
-              "2.30 pm",
+              "3.30 pm",
               "Guest Arrival"
             ],
             [
-              "3 pm",
+              "4.20 pm",
               "Ceremony Begins"
             ],
             [
-              "10 pm",
-              "Event Wrap-Up"
+              "4.45 pm",
+              "Photo Time"
             ],
             [
-              "More details",
-              "To Be Confirmed"
+              "5.00 pm",
+              "Coffee Break"
+            ],
+            [
+              "6.00 pm",
+              "Dinner Reception"
+            ],
+            [
+              "9.00 pm onwards",
+              "Mingle"
             ]
           ]
         }
